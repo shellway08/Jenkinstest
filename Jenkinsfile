@@ -21,7 +21,7 @@ pipeline{
                 echo "编译"
                 sh "pwd&&ls"
                 //sh "cd jenkinsdemo&&pwd&&ls"
-                // /var/jenkins_home/workspace/jenkins-demo@2/jenkinsdemo
+
                 sh "mvn -v"
                 dir('jenkinsdemo') {
                    sh "pwd && ls"
