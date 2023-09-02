@@ -25,7 +25,6 @@ pipeline{
                 sh "mvn -v"
                 sh "cd jenkinsdemo"
                 sh "pwd&&ls"
-
             }
         }
         stage('测试'){
