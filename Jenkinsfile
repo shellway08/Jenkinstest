@@ -21,8 +21,11 @@ pipeline{
             steps{
                 echo "编译"
                 sh "pwd&&ls"
-                sh "pwd&&ls -alp"
+               // sh "pwd&&ls -alp"
                 sh "mvn -v"
+                sh "cd jenkinsdemo"
+                sh "pwd&&ls"
+
             }
         }
         stage('测试'){
