@@ -20,10 +20,10 @@ pipeline{
             steps{
                 echo "编译"
                 sh "pwd&&ls"
-               // sh "pwd&&ls -alp"
+                sh "cd jenkinsdemo && pwd && ls -alp"
                 sh "mvn -v"
                 dir('jenkinsdemo') {
-                    sh "pwd&&ls"
+                    sh "pwd && ls"
                 }
             }
         }
