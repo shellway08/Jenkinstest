@@ -22,8 +22,9 @@ pipeline{
                 sh "pwd&&ls"
                // sh "pwd&&ls -alp"
                 sh "mvn -v"
-                sh "cd jenkinsdemo&&pwd&&ls"
-
+                dir('jenkinsdemo') {
+                    sh "pwd&&ls"
+                }
             }
         }
         stage('测试'){
