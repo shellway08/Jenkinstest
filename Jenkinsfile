@@ -8,9 +8,9 @@ pipeline{
                 sh 'docker version'
                 sh 'java -version'
                 sh 'git --version'
-                sh 'echo 666'
                 sh "${PWD}"
                 sh "$JOB_URL"
+                sh 'echo 666'
             }
         }
         stage('编译'){
