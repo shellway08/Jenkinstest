@@ -24,7 +24,7 @@ pipeline{
                 echo "编译"
                 sh "pwd&&ls"
                 sh "pwd&&ls -alp"
-                sh "66666"
+                sh "6666"
             }
         }
         stage('测试'){
