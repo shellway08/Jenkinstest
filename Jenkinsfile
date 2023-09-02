@@ -11,6 +11,7 @@ pipeline{
                 sh 'printenv'
                 echo "${name}"
                 echo "$password"
+                echo '666'
             }
         }
         stage('编译'){
