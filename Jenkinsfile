@@ -16,6 +16,7 @@ pipeline{
                 sh "echo $JOB_URL"
                 echo "${name}"
                 echo "$password"
+
             }
         }
         stage('编译'){
