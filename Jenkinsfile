@@ -1,7 +1,13 @@
-
 pipeline{
     agent any
     stages{
+        stage('环境'){
+            steps{
+                echo "环境监测"
+                sh 'printenv'
+
+            }
+        }
         stage('编译'){
             steps{
                 echo "编译"
