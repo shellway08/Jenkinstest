@@ -9,11 +9,6 @@ pipeline{
             steps{
                 echo "环境监测"
                 sh 'printenv'
-                sh 'docker version'
-                sh 'java -version'
-                sh 'git --version'
-                echo "${PWD}"
-                sh "echo $JOB_URL"
                 echo "${name}"
                 echo "$password"
             }
