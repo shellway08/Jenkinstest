@@ -22,6 +22,7 @@ pipeline{
                 echo "编译"
                 sh "pwd&&ls"
                 sh "pwd&&ls -alp"
+                sh "mvn -v"
             }
         }
         stage('测试'){
