@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    environment {
+      name = "shellway"
+      password = "123456"
+    }
     stages{
         stage('环境'){
             steps{
@@ -10,7 +14,8 @@ pipeline{
                 sh 'git --version'
                 echo "${PWD}"
                 sh "echo $JOB_URL"
-                echo '66600'
+                echo "${name}"
+                echo "$password"
             }
         }
         stage('编译'){
