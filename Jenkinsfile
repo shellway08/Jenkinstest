@@ -8,8 +8,8 @@ pipeline{
                 sh 'docker version'
                 sh 'java -version'
                 sh 'git --version'
-                sh "${PWD}"
-                sh "$JOB_URL"
+                echo "${PWD}"
+                sh "echo $JOB_URL"
 
             }
         }
