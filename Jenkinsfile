@@ -10,7 +10,6 @@ pipeline{
                 sh 'git --version'
                 echo "${PWD}"
                 sh "echo $JOB_URL"
-
             }
         }
         stage('编译'){
