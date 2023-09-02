@@ -5,7 +5,10 @@ pipeline{
             steps{
                 echo "环境监测"
                 sh 'printenv'
-
+                sh 'docker version'
+                sh 'java -version'
+                sh 'git --version'
+                sh 'echo 666'
             }
         }
         stage('编译'){
