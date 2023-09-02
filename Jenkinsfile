@@ -22,7 +22,7 @@ pipeline{
                 sh "pwd&&ls"
                 sh "cd jenkinsdemo&&pwd&&ls"
                 sh "mvn -v"
-                dir('/jenkinsdemo') {
+                dir('/var/jenkins_home/workspace/jenkins-demo@2/jenkinsdemo') {
                    sh "pwd && ls"
                 }
             }
