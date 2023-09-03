@@ -23,7 +23,7 @@ pipeline{
                 sh 'mvn -v'
                 dir('jenkinsdemo') {
                    sh 'pwd && ls'
-                   sh 'echo 666'
+                   //sh 'echo 666'
                    sh 'mvn clean package -s "/var/jenkins_home/appconfig/maven/settings.xml" -Dmaven.test.skip=true'
                 }
             }
