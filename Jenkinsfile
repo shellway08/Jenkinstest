@@ -25,7 +25,7 @@ pipeline{
                    sh 'pwd && ls'
                    sh 'mvn clean package -s "/var/jenkins_home/appconfig/maven/settings.xml" -Dmaven.test.skip=true'
                     echo "Maven Repository Location:"
-                    echo ${WORKSPACE}/.m2/repository
+                    echo "${WORKSPACE}/.m2/repository"
                     echo "Listing contents of Maven Repository:"
                     sh "ls ${WORKSPACE}/.m2/repository"
                 }
