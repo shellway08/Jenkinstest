@@ -27,7 +27,7 @@ pipeline{
                 //要么直接写jenkinsdemo  前面不要添加/（如：/jenkinsdemo）
                 dir('jenkinsdemo') {
                    sh "pwd && ls"
-                   sh "mvn clean package -Dmaven.test.skip=true"
+                   sh "mvn clean package -s "/var/jenkins_home/appconfig/maven/settings.xml" -Dmaven.test.skip=true"
                 }
             }
         }
