@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('环境'){
             steps{
-                echo "环境监测"
+                echo '环境监测'
                 sh 'printenv'
                 echo "${name}"
                 echo "$password"
@@ -18,11 +18,12 @@ pipeline{
                 docker { image 'maven:3-alpine'}
             }
             steps{
-                echo "编译"
-                sh "pwd&&ls"
-                sh "mvn -v"
+                echo '编译'
+                sh 'pwd&&ls'
+                sh 'mvn -v'
                 dir('jenkinsdemo') {
-                   sh "pwd && ls"
+                   sh 'pwd && ls'
+                   sh 'echo 666'
                    sh 'mvn clean package -s "/var/jenkins_home/appconfig/maven/settings.xml" -Dmaven.test.skip=true'
                 }
             }
